@@ -1,0 +1,23 @@
+<h1>Listing build_objects</h1>
+
+<table>
+  <tr>
+    <th>Type object</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @build_objects.each do |build_object| %>
+  <tr>
+    <td><%= build_object.type_object_id %></td>
+    <td><%= link_to 'Show', build_object %></td>
+    <td><%= link_to 'Edit', edit_build_object_path(build_object) %></td>
+    <td><%= link_to 'Destroy', build_object, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Build object', new_build_object_path %>

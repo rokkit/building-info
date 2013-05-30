@@ -1,4 +1,52 @@
 BuildingInfo::Application.routes.draw do
+  resources :build_objects
+
+
+  resources :anentrances
+
+
+  resources :stairs
+
+
+  resources :overlaps
+
+
+  resources :type_of_houses
+
+
+  resources :materials
+
+
+  resources :type_houses
+
+
+  resources :exthouses
+
+
+  resources :serviceorgs
+
+
+  resources :houses
+
+
+  resources :metros
+
+
+  resources :streets
+
+
+  resources :districts
+
+
+  resources :towns
+
+
+  resources :regions
+
+
+  resources :countries
+
+
   get "pages/index"
 
   devise_for :users

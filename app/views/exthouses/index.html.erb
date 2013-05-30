@@ -1,0 +1,35 @@
+<h1>Listing exthouses</h1>
+
+<table>
+  <tr>
+    <th>Serviceorg</th>
+    <th>Name</th>
+    <th>Byear</th>
+    <th>Overhault</th>
+    <th>Elevator</th>
+    <th>Consierge</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exthouses.each do |exthouse| %>
+  <tr>
+    <td><%= exthouse.serviceorg %></td>
+    <td><%= exthouse.name %></td>
+    <td><%= exthouse.byear %></td>
+    <td><%= exthouse.overhault %></td>
+    <td><%= exthouse.elevator %></td>
+    <td><%= exthouse.consierge %></td>
+    <td><%= exthouse.user %></td>
+    <td><%= link_to 'Show', exthouse %></td>
+    <td><%= link_to 'Edit', edit_exthouse_path(exthouse) %></td>
+    <td><%= link_to 'Destroy', exthouse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exthouse', new_exthouse_path %>

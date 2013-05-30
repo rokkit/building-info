@@ -1,0 +1,76 @@
+// Mixins
+// ------
+// Mixins allow you to define styles that can be re-used 
+// throughout the stylesheet without needing to resort to 
+// non-semantic classes like .float-left. Mixins can also
+// contain full CSS rules, and anything else allowed 
+// elsewhere in a Sass document. They can even take 
+// arguments which allows you to produce a wide variety 
+// of styles with very few mixins. 
+//
+// For complete documentation: 
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
+
+@import "zen"
+
+// Add Compass' IE and vendor prefix support variables.
+@import "compass/support"
+
+// Better than Drupal's clearfix.
+@import "compass/utilities/general/clearfix"
+
+// See http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites"
+
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/css3"
+
+// Helps set up a vertical rhythm.
+@import "compass/typography/vertical_rhythm"
+
+@import "variables.sass"
+
+// Custom mixins
+
+// Black & White functions
+@function black($opacity)
+    @return rgba(0,0,0,$opacity)
+
+@function white($opacity)
+    @return rgba(255,255,255,$opacity)
+
+// Box emboss
+@mixin box-emboss($opacity: .4, $opacity2: .4)
+    box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0
+
+// Letter press
+@mixin letterpress($opacity: .4)
+    text-shadow: white($opacity) 0 1px 0
+
+// Hide text
+@mixin hide-text($display: block)
+    overflow: hidden
+    text-indent: -9000px
+    display: $display
+
+// Horizontal nav
+@mixin clear-nav
+    padding: 0
+    margin: 0
+    li
+        list-style-type: none
+        list-style-image: none
+        padding: 0
+        margin: 0
+        a
+            display: block
+            padding: 0 6px
+
+@mixin horizontal-nav($direction: left)
+    +clear-nav
+    overflow: hidden
+    > li
+        display: block
+        float: $direction
+        &:last-child
+            margin-right: 0px

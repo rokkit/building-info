@@ -1,6 +1,67 @@
-<h1>Главная</h1>
-Добро пожаловать на Home.info!
+
+
+    <div id="content">
+      <div id="content-inner" class="inner column center">
+                  <div id="content-header">
+                          <h1 class="title">Главная</h1>
+                          <div class="tabs"></div>
+          </div> <!-- /#content-header -->
+        <div id="content-area">
+            <div class="region region-content">
+    <div id="block-system-main" class="block block-system block-odd first last clearfix">
+  <div class="block-inner">
+		<div class="content" >
+		  <div id="node-1" class="node node-page node-odd">
+	<div class="node-inner">
+  	<div class="content">
+  	  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Добро пожаловать на Home.info!</p></div></div></div>  	</div>
+    	    <div class="links"></div>
+	</div> <!-- /node-inner -->
+</div> <!-- /node-->
+		</div>
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+        </div>
+      </div>
+    </div> <!-- /content-inner /content -->
+          <div id="sidebar-first" class="column sidebar first">
+        <div id="sidebar-first-inner" class="inner">
+            <div class="region region-sidebar-first">
+    <div id="block-views-posts-block_1" class="block block-views block-odd first last clearfix">
+  <div class="block-inner">
+              <h2 class="block-title">Новости</h2>
+		<div class="content" >
+		  <div class="view view-posts view-id-posts view-display-id-block_1 view-dom-id-c4bca84045acf7280b60c3980090e061">
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/na-territorii-krasnogo-oktyabrya-v-moskve-postroyat-127-tys-kv-m-nedvizhimosti">На территории «Красного Октября» в Москве построят 127 тыс. кв. м недвижимости</a></span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>На заседании правительства <a href="http://www.bn.ru/moskva/" target="_blank">Москвы </a>утвержден проект планировки территории бывшего завода «Красный Октябрь» на Берсеневской набережной</p></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/predsedatel-komiteta-zhkh-velikogo-novgoroda-podal-v-otstavku">Председатель Комитета ЖКХ Великого Новгорода подал в отставку</a></span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Председатель Комитета ЖКХ администрации Великого Новгорода Михаил Красников покинул свой пост, передает <a href="http://www.novgorod.ru/" target="_blank">«Новгород.Ру»</a>.</p></div>  </div>  </div>
+    </div>
+</div>		</div>
+
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+        </div>
+      </div>
+     <!-- /sidebar-first -->
+       <div id="sidebar-second" class="column sidebar second">
+        <div id="sidebar-second-inner" class="inner">
+            <div class="region region-sidebar-second">
+    <div id="block-user-login" class="block block-user block-odd first last clearfix">
+  <div class="block-inner">
+
+                <h2 class="block-title">Вход на сайт</h2>
+		<div class="content" >
 <% if user_signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>
   <%= render 'devise/sessions/new' %>
 <% end %>
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+        </div>
+      </div>
+     <!-- /sidebar-second -->

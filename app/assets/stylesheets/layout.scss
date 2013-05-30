@@ -1,0 +1,51 @@
+@import "mixins.sass";
+@import "variables.sass";
+
+#page {
+  @include zen-grid-container();
+  margin: 0 auto;
+  width: $zen-grid-width;
+  min-width: 960px;
+}
+
+#header {
+  @include zen-grid-container();
+}
+
+// Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.)
+.no-sidebars #content {
+  @include zen-grid-item(12, 1);
+}
+#content, #header-region {
+  @include zen-grid-item(10, 3);
+}
+.two-sidebars #content {
+  @include zen-grid-item(8, 3);
+}
+
+// Layout Helpers
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+}
+
+#sidebar-first, #branding {
+  @include zen-grid-item(2, 1);
+}
+#sidebar-second {
+  @include zen-grid-item(2, 11);
+}
+
+// Columns Inner
+.inner {
+  padding: 0;
+}
+
+// Navigation styles
+
+#navigation {
+  height: 40px;
+}

@@ -6,10 +6,39 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+<body class="html front not-logged-in two-sidebars page-node page-node- page-node-1 node-type-page">
+  <div id="page" class="page with-navigation">
+ <!-- ______________________ HEADER _______________________ -->
 
+  <div id="header">
+
+    <div id="branding">
+              <a href="/" title="Главная" rel="home" id="logo">
+          <img src="http://home-info.dot-tech.ru/sites/all/themes/homeinfo/logo.png" alt="Главная"/>
+    </a>
+          </div>
+
+        <div id="header-region">
+          <div class="region region-header">
+            <div id="block-system-main-menu" class="block block-system block-menu block-odd first last clearfix">
+              <div class="block-inner">
+                <div class="content" >
+                  <ul class="menu"><li class="first leaf active-trail glavnaya mid-343"><%= link_to 'Главная', root_path %></li>
+                    <li class="leaf novosti mid-384"><a href="/news">Новости</a></li>
+                    <li class="leaf spisok-obektov mid-527"><a href="/objects">Список объектов</a></li>
+                    <li class="last leaf stati mid-477"><a href="/posts">Статьи</a></li>
+                  </ul>		
+                </div>
+              </div>
+            </div> <!-- /block-inner /block -->  
+          </div>
+        </div>
+  </div> <!-- /header -->
+ <!-- ______________________ MAIN _______________________ -->
+
+  <div id="main" class="clearfix">
+    <%= yield %>
+</div> <!-- /main -->
+  </div>
 </body>
 </html>

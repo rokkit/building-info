@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @serviceorg.name %>
+</p>
+
+<p>
+  <b>Adress:</b>
+  <%= @serviceorg.adress %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @serviceorg.description %>
+</p>
+
+<p>
+  <b>Typeofservice:</b>
+  <%= @serviceorg.typeofservice %>
+</p>
+
+<p>
+  <b>House:</b>
+  <%= @serviceorg.house %>
+</p>
+
+
+<%= link_to 'Edit', edit_serviceorg_path(@serviceorg) %> |
+<%= link_to 'Back', serviceorgs_path %>

@@ -1,0 +1,23 @@
+<h1>Listing anentrances</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @anentrances.each do |anentrance| %>
+  <tr>
+    <td><%= anentrance.name %></td>
+    <td><%= link_to 'Show', anentrance %></td>
+    <td><%= link_to 'Edit', edit_anentrance_path(anentrance) %></td>
+    <td><%= link_to 'Destroy', anentrance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Anentrance', new_anentrance_path %>

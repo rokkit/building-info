@@ -1,0 +1,31 @@
+<h1>Listing serviceorgs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Adress</th>
+    <th>Description</th>
+    <th>Typeofservice</th>
+    <th>House</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @serviceorgs.each do |serviceorg| %>
+  <tr>
+    <td><%= serviceorg.name %></td>
+    <td><%= serviceorg.adress %></td>
+    <td><%= serviceorg.description %></td>
+    <td><%= serviceorg.typeofservice %></td>
+    <td><%= serviceorg.house %></td>
+    <td><%= link_to 'Show', serviceorg %></td>
+    <td><%= link_to 'Edit', edit_serviceorg_path(serviceorg) %></td>
+    <td><%= link_to 'Destroy', serviceorg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Serviceorg', new_serviceorg_path %>

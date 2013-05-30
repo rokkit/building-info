@@ -1,0 +1,23 @@
+<h1>Listing overlaps</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @overlaps.each do |overlap| %>
+  <tr>
+    <td><%= overlap.name %></td>
+    <td><%= link_to 'Show', overlap %></td>
+    <td><%= link_to 'Edit', edit_overlap_path(overlap) %></td>
+    <td><%= link_to 'Destroy', overlap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Overlap', new_overlap_path %>

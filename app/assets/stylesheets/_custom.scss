@@ -1,0 +1,209 @@
+// Custom
+// ------
+// This file is used to define custom overrides and
+// style changes to be used for building your theme.
+
+// Import variables and mixins to be used.
+@import "mixins.sass";
+
+#page {
+	padding: 22px 0;
+}
+
+// HEADER area
+#header {
+	border-top:1px solid #000;
+}
+#branding {
+	text-align: center;
+	padding: 10px 0;
+}
+#header-region {
+  display: block;
+	position: relative;
+	height: 97px;
+}
+// main menu
+#block-system-main-menu {
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	ul {
+		@include horizontal-nav();
+		li {
+			border-right: 1px solid #808080;
+			&.last {
+				border-right: 0 none;
+			}
+			a {
+				display: inline-block;
+				padding: 4px 15px 4px 15px;
+				font-size: 1.2em;
+				font-family: $pt-sans;
+				font-weight: bold;
+				color: #000;
+				&.active {
+					border-bottom: 2px solid $blue;
+					padding-bottom: 2px;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+// MAIN area
+#main {
+	margin: 25px 0;
+	h1.title {
+		font-family: $pt-sans;
+		font-weight: bold;
+		font-size: 1.5em;
+		color: $blue;
+	}
+}
+
+#content-area {
+	table {
+		border:1px solid #ccc;
+		thead {
+			border-bottom: 1px solid #ccc;
+			background-color: #F2F2F2;
+			th {
+				font-size: 1.3em;
+				text-align: center;
+				padding: 5px;
+				color: #999;
+			}
+		}
+		tbody {
+			tr {
+				.views-field-field-apt-price {
+					width: 11%;
+				}
+				.views-field-field-house-region {
+					width: 20%;
+				}
+				td {
+					border: 1px solid #ccc;
+					font-size: .9em;
+					.shs-hierarchy {
+						@include clear-nav();
+					}
+					.description {
+						float: left;
+						width: 70%;
+						margin-right: 5%;
+					}
+					.photo {
+
+					}
+					.more {
+						a {
+							width: 22px;
+							height: 12px;
+							margin-left: 5px;
+							@include hide-text(inline-block);
+							background: url(../images/icons.png) no-repeat 0px -103px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// Objects
+.view-objects-list {
+	.views-exposed-widgets {
+		.form-type-textfield {
+			input {
+				width:100px;
+			}
+		}
+		#edit-field-house-region-tid-wrapper {
+			clear: both;
+		}
+		.form-submit {
+			border:0 none;
+			display: inline-block;
+			height: 17px;
+			padding-right: 40px;
+			background-color: transparent;
+			background: url(../images/icons.png) no-repeat right -24px;
+		}
+	}
+}
+
+// SIDEBARs
+.sidebar {
+  display: block;
+	.block {
+		border: 1px solid #CCCCCC;
+		background-color: #F2F2F2;
+		margin-bottom: 1.5em;
+		.block-title {
+			background-color: $blue;
+			border-bottom: 1px solid #000;
+			color: #fff;
+			font-size: 1em;
+			padding: 6px 8px;
+			margin-bottom: 0;
+		}
+		.content {
+			padding: 6px 8px;
+		}
+		.menu {
+			@include clear-nav();
+		}
+	}
+}
+// search
+#block-search-form {
+	input {
+		border: 0;
+		background: transparent;
+	}
+	.form-text {
+		width: 80%;
+		padding: 4px;
+	}
+	.form-submit {
+		@include hide-text(inline-block);
+		background: url(../images/icons.png) no-repeat 0px 0px;
+		width: 18px;
+	}
+}
+// login
+#block-user-login {
+	.form-item {
+		input {
+			width: 96%;
+		}
+	}
+	.item-list {
+		ul {
+			@include clear-nav();
+		}
+	}
+	.form-submit {
+		border:0 none;
+		background-color: $blue;
+		color: #fff;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+// FOOTER area
+#footer {
+	margin: 0 zen-half-gutter();
+}
+#block-block-1 {
+	border-top:1px solid #000;
+	font-size: .9em;
+	text-align: right;
+}
+
+// MISC

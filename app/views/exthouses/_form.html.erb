@@ -1,0 +1,61 @@
+<%= simple_form_for(@exthouse) do |f| %>
+  <% if @exthouse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exthouse.errors.count, "error") %> prohibited this exthouse from being saved:</h2>
+
+      <ul>
+      <% @exthouse.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Дом обслуживает', :serviceorg %><br />
+    <%= f.association :serviceorg %>
+  </div>
+  <div class="field">
+    <%= f.label 'Тип', :type_of_house %><br />
+    <%= f.association :type_of_house %>
+  </div>  
+   <div class="field">
+    <%= f.label 'Материал', :material %><br />
+    <%= f.association :material %>
+  </div>
+  <div class="field">
+    <%= f.label 'Лестница', :stair %><br />
+    <%= f.association :stair %>
+  </div>
+  <div class="field">
+    <%= f.label 'Вход в подъезд', :anentrance %><br />
+    <%= f.association :anentrance %>   
+  </div>
+  <div class="field">
+    <%= f.label 'Название', :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Год постройки" ,:byear %><br />
+    <%= f.date_select :byear %>
+  </div>
+  <div class="field">
+    <%= f.label 'Кап ремонт',:overhault %><br />
+    <%= f.check_box :overhault %>
+  </div>
+  <div class="field">
+    <%= f.label 'Лифт', :elevator %><br />
+    <%= f.check_box :elevator %>
+  </div>
+  <div class="field">
+    <%= f.label 'Консьерж', :consierge %><br />
+    <%= f.check_box :consierge %>
+  </div>
+  <div class="field">
+    <%= f.label 'Высота первого этажа', :hfirstfloor %><br />
+    <%= f.number_field :hfirstfloor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Listing type_houses</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @type_houses.each do |type_house| %>
+  <tr>
+    <td><%= type_house.name %></td>
+    <td><%= link_to 'Show', type_house %></td>
+    <td><%= link_to 'Edit', edit_type_house_path(type_house) %></td>
+    <td><%= link_to 'Destroy', type_house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Type house', new_type_house_path %>

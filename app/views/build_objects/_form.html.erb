@@ -1,0 +1,21 @@
+<%= form_for(@build_object) do |f| %>
+  <% if @build_object.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@build_object.errors.count, "error") %> prohibited this build_object from being saved:</h2>
+
+      <ul>
+      <% @build_object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_object_id %><br />
+    <%= f.number_field :type_object_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
