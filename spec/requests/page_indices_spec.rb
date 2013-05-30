@@ -13,6 +13,8 @@ describe "PageIndices" do
     context "when user login with valida cred" do
       before do
         visit pages_index_path
+        fill_in :email, with:"email@mail.ru"
+        fill_in :password, with: "secret"
       end
       subject { page }
       it { should have_content "Вход на сайт" }
