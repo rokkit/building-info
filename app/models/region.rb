@@ -1,3 +1,4 @@
 class Region < ActiveRecord::Base
-  attr_accessible :country, :name
+  belongs_to :country
+  attr_accessible :country_id, :name
 end
